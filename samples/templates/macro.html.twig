@@ -1,0 +1,56 @@
+{#
+/**
+ * @file
+ * Custom macros used for adding a new section to a page.
+ */
+#}
+
+{#
+ # {% import '../marcos/section.html.twig' as sections %}
+ # A list of predefined modifier classes
+ #
+ # section_id
+ # this id is used as the anchor link destination for the sidebar menu links
+ #
+ # section_modifiers
+ # - node__content__section--first-full
+ # - node__content__section--padding-top
+ # - node__grid__section
+ #
+ # title_modifiers
+ # - node__content__section__title--hidden--always
+ # - node__content__section__title--hidden--desktop-only
+ #
+ # title_text
+ # this text will display as the section title and the corresponding sidebar menu link
+ #
+ # content_modifiers
+ # - node__content__section__info--no-padding
+ #
+ # title_text_hidden
+ # this text will display as a continuation of the section title but will not appear in certain circumstances, such as the corresponding sidebar menu link
+ #
+ # @use
+ # {{ sections.section_open('section_id', 'section_modifiers', 'title_modifiers', 'title_text', 'content_modifiers', 'title_text_hidden') }}
+ #  {{ content }}
+ # {{ sections.section_close() }}
+ #
+ #}
+{% macro section_open(section_id, section_modifiers, title_modifiers, title_text, content_modifiers, title_text_hidden) %}
+  <section id="content__section--{{ section_id }}" class="node__content node__content__section {{ section_modifiers }}">
+    {% spaceless %}
+      <h2 class="node__content__section__title js__section__anchor--link {{ title_modifiers }}">
+        {{ title_text|t }}
+        {# additional title text that is hidden in some circumstances #}
+        {% if title_text_hidden %}
+          <span class="desktop-only">{{ title_text_hidden|t }}</span>
+        {% endif %}
+      </h2>
+    {% endspaceless %}
+    <div class="node__content__section__info js__section__anchor--destination {{ content_modifiers }}">
+{% endmacro section_open %}
+
+{% macro section_close() %}
+    </div>
+  </section>
+{% endmacro section_close %}

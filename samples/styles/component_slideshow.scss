@@ -1,0 +1,16 @@
+// Slideshow Component Styles
+
+.slideshow {
+
+  // main image container
+  &__main-image {}
+
+  // thumbnail container
+  &__thumbnails {}
+
+  // container for the slideshow controls
+  &__actions {}
+
+  // modifier based on the type of page it is on
+  .page-type-page & {}
+}

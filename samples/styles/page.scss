@@ -1,0 +1,34 @@
+// Page Styles
+
+// main page container
+.page {
+
+  // header
+  &__header {}
+
+  // default site logo
+  &__logo {}
+
+  // menu styles can be found in the menu_main.scss file
+  // &__menu--main {}
+
+  &__banner {}
+
+  // main
+  &__content {}
+
+  //
+  &__node {}
+
+  // menu styles can be found in the menu.scss file
+  // &__menu--sidebar {}
+
+  // aside
+  &__related-content {}
+
+  // footer
+  &__footer {}
+
+  // menu styles can be found in the menu_footer.scss file
+  // &__menu--footer {}
+}

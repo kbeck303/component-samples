@@ -1,0 +1,30 @@
+// Footer Menu Styles
+.footer {
+
+  // ul
+  &__list {
+
+    // first level ul
+    &--alpha {}
+  }
+
+  // li
+  &__item {
+
+    // first level li
+    &--alpha {}
+  }
+
+  // a
+  &__link {
+
+    // first level link
+    &--alpha {}
+
+    // link icon
+    &--icon {}
+
+    // link text
+    &--text {}
+  }
+}

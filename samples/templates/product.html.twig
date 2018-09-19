@@ -1,0 +1,30 @@
+{# Product Page Layout #}
+
+<div class="page">
+  <header class="page__header">
+    <div class="page__logo logo">{{ component.logo }}</div>
+    <div class="page__menu--main main-menu" role="navigation">{{ component.main_menu }}</div>
+  </header>
+  <div class="page__banner page__banner--slideshow slideshow">{{ component.slideshow }}</div>
+  <main class="page__content">
+    <div class="page__menu--sidebar sidebar" role="navigation">{{ component.sidebar_menu }}</div>
+    <div class="page__node node">
+      <h1>Page Title</h1>
+      <p>Page content</p>
+    </div>
+    <aside class="page__related-content" role="complementary">
+      <h2>Related Products</h2>
+      {{ component.teaser_with_image }}
+      {{ component.teaser_with_image }}
+      {{ component.teaser_with_image }}
+      <h2>Related Blog Posts</h2>
+      {{ component.teaser_no_image }}
+      {{ component.teaser_no_image }}
+      {{ component.teaser_no_image }}
+    </aside>
+  </main>
+  <footer class="page__footer">
+    <div>Copyright</div>
+    <div class="page__menu--footer footer" role="navigation">{{ component.footer_menu }}</div>
+  </footer>
+</div>

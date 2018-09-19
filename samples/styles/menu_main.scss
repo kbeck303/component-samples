@@ -1,0 +1,48 @@
+// Main Menu Styles
+.footer {
+
+  // ul
+  &__list {
+
+    // first level ul
+    &--alpha {}
+
+    // second level ul
+    &--beta {}
+
+    // third level ul
+    &--charlie {}
+  }
+
+  // li
+  &__item {
+
+    // first level li
+    &--alpha {}
+
+    // second level li
+    &--beta {}
+
+    // third level li
+    &--charlie {}
+  }
+
+  // a
+  &__link {
+
+    // link icon
+    &--icon {}
+
+    // link text
+    &--text {}
+
+    // first level link
+    &--alpha {}
+
+    // second level link
+    &--beta {}
+
+    // third level link
+    &--charlie {}
+  }
+}
